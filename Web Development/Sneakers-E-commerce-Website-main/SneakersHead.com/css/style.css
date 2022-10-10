@@ -1,0 +1,788 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* CSS Variables */
+
+:root {
+    --navbar-height: 59px;
+}
+
+
+/* Navigation Bar */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+
+/* Navigation Bar: Logo and Image */
+
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+
+/* Home Section */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('../bg1.jpg') no-repeat center center/cover;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+
+/* Services Section */
+
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+#services .box:hover {
+    /*  background: #55595c; */
+    transform: translateY(-25px);
+}
+
+
+/* Clients Section */
+
+#client-section {
+    position: relative;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('46.jpg');
+    /*  background-color: #333; */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 50px;
+}
+
+#clients img {
+    height: 100px;
+    border-radius: 30%;
+    transition: transform .2s;
+    /* Animation */
+}
+
+#clients img:hover {
+    transform: scale(1.25);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+/* Contact Section */
+
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+
+/* Utility Classes */
+
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    color: black;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    color: black;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    font-size: 13px;
+    margin: 0;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: arial;
+    color: #333;
+    font-size: 14px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ :focus {
+    outline: none;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.inner {
+    padding: 20px;
+    background: #fff;
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+}
+
+.inner .image-holder {
+    width: 50%;
+}
+
+.inner form {
+    width: 50%;
+    padding-top: 36px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.inner h3 {
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    display: flex;
+}
+
+.form-group input {
+    width: 50%;
+}
+
+.form-group input:first-child {
+    margin-right: 25px;
+}
+
+.form-wrapper {
+    position: relative;
+}
+
+.form-wrapper i {
+    position: absolute;
+    bottom: 9px;
+    right: 0;
+}
+
+.form-control {
+    border: 1px solid #333;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.form-control::-webkit-input-placeholder {
+    font-size: 14px;
+    color: gray;
+    font-family: arial;
+}
+
+select {
+    font-size: 14px;
+    font-family: arial;
+    cursor: pointer;
+    padding-left: 20px;
+    color: gray;
+}
+
+select option[value=""][disabled] {
+    display: none;
+}
+
+button {
+    border: none;
+    width: 164px;
+    height: 51px;
+    margin: auto;
+    margin-top: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #333;
+    font-size: 15px;
+    color: #fff;
+}
+
+button:hover {
+    background: or;
+}
+
+@media (max-width: 767px) {
+    .inner {
+        display: block;
+    }
+    .inner .image-holder {
+        width: 100%;
+    }
+    .inner form {
+        width: 100%;
+        padding: 40px 0 30px;
+    }
+    button {
+        margin-top: 60px;
+    }
+}
+
+.col-md-offset-4 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+.form-container {
+    background: linear-gradient(150deg, #1B394D 33%, #2D9DA7 34%, #2D9DA7 66%, #EC5F20 67%);
+    font-family: Arial;
+    text-align: center;
+    padding: 30px 20px 50px;
+}
+
+.form-container .title {
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 0 60px;
+}
+
+.form-container .form-horizontal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.form-horizontal .form-icon {
+    color: #fff;
+    background-color: #1B394D;
+    font-size: 75px;
+    line-height: 92px;
+    height: 90px;
+    width: 90px;
+    margin: -65px auto 10px;
+    border-radius: 50%;
+}
+
+.form-horizontal .form-group {
+    margin: 0 0 10px;
+    position: relative;
+}
+
+.form-horizontal .form-group:nth-child(3) {
+    margin-bottom: 30px;
+}
+
+.form-horizontal .form-group .input-icon {
+    color: #e7e7e7;
+    font-size: 23px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.form-horizontal .form-control {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    height: 50px;
+    padding: 10px 10px 10px 40px;
+    margin: 0 0 5px;
+    border: none;
+    border-bottom: 2px solid #e7e7e7;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.form-horizontal .form-control:focus {
+    box-shadow: none;
+    border-bottom-color: #EC5F20;
+}
+
+.form-horizontal .form-control::placeholder {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-horizontal .forgot {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    display: block;
+}
+
+.form-horizontal .forgot a {
+    color: #777;
+    transition: all 0.3s ease 0s;
+}
+
+.form-horizontal .forgot a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+.form-horizontal .signin {
+    color: #fff;
+    background-color: #EC5F20;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease 0s;
+}
+
+.form-horizontal .signin:hover,
+.form-horizontal .signin:focus {
+    font-weight: 600;
+    letter-spacing: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+}
+
+header .search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    color: gray;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: green;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(50.jpg);
+    background-size: cover;
+    font-family: arial;
+    text-align: center;
+}
+
+.loginBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    padding: 70px 40px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.user {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: calc(-100px/2);
+    left: calc(50% - 50px);
+    border: 3px dotted #d2dfe7;
+    background: #fff;
+}
+
+h2 {
+    margin: 0;
+    padding: 0 0 26px;
+    color: #d2dfe7;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.loginBox input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginBox input[type="email"],
+.loginBox input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+ ::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.loginBox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #eee;
+    font-size: 16px;
+    background-color: #FF8C00;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 12px 0 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.loginBox input[type="submit"]:hover {
+    background-color: #ff9719;
+    color: #fff;
+}
+
+.loginBox a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.product .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.product .box-container .box {
+    flex: 1 1 30rem;
+    text-align: center;
+    padding: 2rem;
+    border: .1rem solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.product .box-container .box img {
+    height: 20rem;
+}
+
+.product .box-container .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(0, 255, 0, .1);
+    color: var(--green);
+    padding: .7rem 1rem;
+    font-size: 2rem;
+}
+
+.product .box-container .box .icons {
+    position: absolute;
+    top: .5rem;
+    right: -6rem;
+}
+
+.product .box-container .box:hover .icons {
+    right: 1rem;
+}
+
+.product .box-container .box .icons a {
+    display: block;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: rgba(0, 0, 0, .05);
+    border-radius: 50%;
+    margin-top: .7rem;
+}
+
+.product .box-container .box .icons a:hover {
+    background: var(--green);
+    color: #fff;
+}
+
+.product .box-container .box h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.product .box-container .box .stars i {
+    padding: 1rem .1rem;
+    font-size: 1.7rem;
+    color: gold;
+}
+
+.product .box-container .box .price {
+    font-size: 2rem;
+    color: #333;
+    padding: .5rem 0;
+}
+
+.product .box-container .box .price span {
+    font-size: 1.5rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.product .box-container .box .quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+.product .box-container .box .quantity span {
+    padding: 0 .7rem;
+    font-size: 1.7rem;
+}
+
+.product .box-container .box .quantity input {
+    border: .1rem solid rgba(0, 0, 0, .3);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: var(--black);
+    padding: .5rem;
+    background: rgba(0, 0, 0, .05);
+}
+
+.product .box-container .box .btn {
+    display: block;
+    color: #ffffff;
+    background: #000;
+    font-family: 'Bree Serif', serif;
+}
