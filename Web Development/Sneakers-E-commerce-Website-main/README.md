@@ -1,8 +1,11 @@
 # Sneakers-E-commerce-Website
 
 List of Companies to be added as Clients-
+
 Walmart
+
 Amazon
+
 Apple
 CVS Health
 UnitedHealth Group
