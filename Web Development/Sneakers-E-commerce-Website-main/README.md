@@ -2,9 +2,9 @@
 
 List of Companies to be added as Clients-
 
-Walmart
-Amazon
-Apple
+Walmart |
+Amazon |
+Apple |
 CVS Health
 UnitedHealth Group
 Exxon Mobil
