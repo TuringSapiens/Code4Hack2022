@@ -262,7 +262,7 @@ void double_llist::display_dlist()
 }
  
 /*
- * Number of elements in Doubly Link List
+ * Number of elements in Doubly Link List to show
  */
 void double_llist::count()
 { 	
