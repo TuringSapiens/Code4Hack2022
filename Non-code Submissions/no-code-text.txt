@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+int a;
+string s;
+int main()
+{
+cout << "Enter :" ;
+cin >> a;
+cin >> s;
+int i=0;
+int c=0;
+int d=0;
+while (i<a)
+{
+     if(s[i]=='A')
+    { 
+        c++;
+    }
+    else
+
+       {
+        d++;
+       }
+       i++;
+}
+
+if(c>d)
+{cout << "Anton";}
+else if(d>c)
+{cout << "Danik";}
+else
+{cout << "Friendship";}
+return 0;
+
+}
