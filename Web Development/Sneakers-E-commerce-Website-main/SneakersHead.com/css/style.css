@@ -166,6 +166,8 @@ html {
 
 #clients {
     display: flex;
+    grid-template-rows: repeat(3, 1fr);             //Remove lines 171 and 172 for grid style in order to add more clients AND change display style to grid
+    grid-template-columns: repeat(5, 1fr);   
     justify-content: center;
     align-items: center;
 }
