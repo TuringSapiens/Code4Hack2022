@@ -1,0 +1,16 @@
+line=input("enter a line:")
+lowercount=uppercount=digitcount=alphacount=0
+for a in line:
+    if a.islower():
+        lowercount+=1
+    elif a.isupper():
+        uppercount+=1
+    elif a.isdigit():
+        digitcount+=1
+    if a.isalpha():
+        alphacount+=1
+
+print("number of uppercase=",uppercount)
+print("number of lowercase=",lowercount)
+print("number of digit=",digitcount)
+print("number of alphabet=",alphacount)
