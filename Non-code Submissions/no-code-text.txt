@@ -1,4 +1,15 @@
 
+#iostream
+using namespace std;
+int main(){
+int x,y;
+  cout << "Enter number 1";
+  cin >> x;
+  cout << "Enter number 2";
+  cin >> y;
+  cout << (x+y);
+  }
+
 def binary_search(arr, low, high, x):
  
     # Check base case
@@ -544,4 +555,4 @@ int x,y;
 import random
 
 my_list = [1, 'a', 32, 'c', 'd', 31]
-print(random.choice(my_list))
+print(random.choice(my_list)
