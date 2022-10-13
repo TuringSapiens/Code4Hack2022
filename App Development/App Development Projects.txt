@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int marks;
+    cout<<"Gib marks_ ";
+    cin>>marks;
+
+    if(marks<25){
+        cout<<"You got an F bitch";
+    }
+    else if(marks<45&&marks>=25){
+        cout<<"You got an E";
+    }
+    else if(marks<50&&marks>=45){
+        cout<<"You got an D";
+    }
+    else if(marks<60&&marks>=50){
+        cout<<"You got an C";
+    }
+    else if(marks<80&&marks>=60){
+        cout<<"You got an B";
+    }
+    else{
+        cout<<"You got an A";
+    }
+    return 0;
+
+}

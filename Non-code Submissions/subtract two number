@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+
+    int firstNumber, secondNumber, sub;
+
+    printf("Enter the first number : ");
+    scanf("%d",&firstNumber);
+
+    printf("Enter the second number : ");
+    scanf("%d",&secondNumber);
+
+    sub = firstNumber - secondNumber;
+
+    printf("The subtraction of %d and %d is %d",firstNumber,secondNumber,sub);
+
+    return 0;
+}
