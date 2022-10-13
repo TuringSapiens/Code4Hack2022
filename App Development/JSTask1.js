@@ -82,6 +82,13 @@ const apparel = [
         Brand: "Womanista",
         Actual_price: 2,
         Discount: 1
+    },
+    {
+        Name: "Nail",
+        Category: "accessories",
+        Brand: "Womanista",
+        Actual_price: 200,
+        Discount: 2
     }
 ];
 
