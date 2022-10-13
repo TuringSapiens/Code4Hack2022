@@ -1,0 +1,586 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b,c;
+    cin>>a;
+    cin>>b;
+    cin>>c;
+
+    if(a>b){
+        if(a>c){
+            cout<<a<<" will die first";
+        }
+        else{
+            cout<<c<<" will die first";
+        }
+    }
+    else{
+        if(b>c){
+            cout<<b<<" will die first";
+        }
+        else{
+            cout<<c<<" will die first";
+        }
+    }
+    return 0;
+    
+}
+
+#iostream
+using namespace std;
+int main(){
+int x,y;
+  cout << "Enter number 1";
+  cin >> x;
+  cout << "Enter number 2";
+  cin >> y;
+  cout << (x+y);
+  }
+
+def binary_search(arr, low, high, x):
+ 
+    # Check base case
+    if high >= low:
+ 
+        mid = (high + low) // 2
+ 
+        # If element is present at the middle itself
+        if arr[mid] == x:
+            return mid
+ 
+        # If element is smaller than mid, then it can only
+        # be present in left subarray
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid - 1, x)
+ 
+        # Else the element can only be present in right subarray
+        else:
+            return binary_search(arr, mid + 1, high, x
+            return binary_search(arr, mid + 1, high, x)
+    else:
+        # Element is not present in the array
+        return -1
+
+
+
+#include <stdio.h>
+int main() {    
+
+    int number1, number2, sum;
+    
+    printf("Enter two integers: ");
+    scanf("%d %d", &number1, &number2);
+
+    // calculating sum
+    sum = number1 + number2;      
+    
+    printf("%d + %d = %d", number1, number2, sum);
+    return 0;
+}
+
+
+// C++ code to linearly search x in arr[]. If x
+// is present then return its location, otherwise
+// return -1
+
+#include <iostream>
+using namespace std;
+
+
+int binarySearch(int array[], int x, int low, int high) {
+  
+	// Repeat until the pointers low and high meet each other
+  while (low <= high) {
+    int mid = low + (high - low) / 2;
+
+    if (array[mid] == x)
+      return mid;
+
+    if (array[mid] < x)
+      low = mid + 1;
+
+    else
+      high = mid - 1;
+  }
+
+  return -1;
+}
+
+int main(void) {
+  int array[] = {3, 4, 5, 6, 7, 8, 9};
+  int x = 4;
+  int n = sizeof(array) / sizeof(array[0]);
+  int result = binarySearch(array, x, 0, n - 1);
+  if (result == -1)
+    printf("Not found");
+  else
+    printf("Element is found at index %d", result);
+}
+
+int search(int arr[], int N, int x)
+{
+	int i;
+	for (i = 0; i < N; i++)
+		if (arr[i] == x)
+			return i;
+	return -1;
+}
+
+// Driver's code
+int main(void)
+{
+	int arr[] = { 2, 3, 4, 10, 40 };
+
+
+
+
+
+	int x = 10;
+	int N = sizeof(arr) / sizeof(arr[0]);
+
+	// Function call
+	int result = search(arr, N, x);
+	(result == -1)
+		? cout << "Element is not present in array"
+		: cout << "Element is present at index " << result;
+	return 0;
+}
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+/*
+ * Node Declaration
+ */
+using namespace std;
+struct node
+{
+    int info;
+    struct node *next;
+    struct node *prev;
+}*start;
+ 
+/*
+ Class Declaration 
+ */
+class double_llist
+{
+    public:
+        void create_list(int value);
+        void add_begin(int value);
+        void add_after(int value, int position);
+        void delete_element(int value);
+        void search_element(int value);
+        void display_dlist();
+        void count();
+        void reverse();
+        double_llist()
+        {
+            start = NULL;  
+        }
+};
+ 
+/*
+ * Main: Conatins Menu
+ */
+int main()
+{
+    int choice, element, position;
+    double_llist dl;
+    while (1)
+    {
+        cout<<endl<<"----------------------------"<<endl;
+        cout<<endl<<"Operations on Doubly linked list"<<endl;
+        cout<<endl<<"----------------------------"<<endl;         
+        cout<<"1.Create Node"<<endl;
+        cout<<"2.Add at begining"<<endl;
+        cout<<"3.Add after position"<<endl;
+        cout<<"4.Delete"<<endl;
+        cout<<"5.Display"<<endl;
+        cout<<"6.Count"<<endl;
+        cout<<"7.Reverse"<<endl;
+        cout<<"8.Quit"<<endl;
+        cout<<"Enter your choice : ";
+        cin>>choice;
+        switch ( choice )
+        {
+        case 1:
+            cout<<"Enter the element: ";
+            cin>>element;
+            dl.create_list(element);
+            cout<<endl;
+            break;
+        case 2:
+            cout<<"Enter the element: ";
+            cin>>element;
+            dl.add_begin(element);
+            cout<<endl;
+            break;
+        case 3:
+            cout<<"Enter the element: ";
+            cin>>element;
+            cout<<"Insert Element after postion: ";
+            cin>>position;
+            dl.add_after(element, position);
+            cout<<endl;
+            break;
+        case 4:
+            if (start == NULL)
+            {                      
+                cout<<"List empty,nothing to delete"<<endl;   
+                break;
+            }
+            cout<<"Enter the element for deletion: ";
+            cin>>element;
+            dl.delete_element(element);
+            cout<<endl;
+            break;
+        case 5:
+            dl.display_dlist();
+            cout<<endl;
+            break;
+        case 6:
+            dl.count();
+            break;    
+        case 7:
+            if (start == NULL)
+            {
+                cout<<"List empty,nothing to reverse"<<endl;
+                break;
+            }
+            dl.reverse();
+            cout<<endl;
+            break;
+        case 8:
+            exit(1);
+        default:
+            cout<<"Wrong choice"<<endl;
+        }
+    }
+    return 0;
+}
+ 
+/*
+ * Create Double Link List
+ */
+void double_llist::create_list(int value)
+{
+    struct node *s, *temp;
+    temp = new(struct node); 
+    temp->info = value;
+    temp->next = NULL;
+    if (start == NULL)
+    {
+        temp->prev = NULL;
+        start = temp;
+    }
+    else
+    {
+        s = start;
+        while (s->next != NULL)
+            s = s->next;
+        s->next = temp;
+        temp->prev = s;
+    }
+}
+ 
+/*
+ * Insertion at the beginning
+ */
+void double_llist::add_begin(int value)
+{
+    if (start == NULL)
+    {
+        cout<<"First Create the list."<<endl;
+        return;
+    }
+    struct node *temp;
+    temp = new(struct node);
+    temp->prev = NULL;
+    temp->info = value;
+    temp->next = start;
+    start->prev = temp;
+    start = temp;
+    cout<<"Element Inserted"<<endl;
+}
+ 
+/*
+ * Insertion of element at a particular position
+ */
+void double_llist::add_after(int value, int pos)
+{
+    if (start == NULL)
+    {
+        cout<<"First Create the list."<<endl;
+        return;
+    }
+    struct node *tmp, *q;
+    int i;
+    q = start;
+    for (i = 0;i < pos - 1;i++)
+    {
+        q = q->next;
+        if (q == NULL)
+        {
+            cout<<"There are less than ";
+            cout<<pos<<" elements."<<endl;
+            return;
+        }
+    }
+    tmp = new(struct node);
+    tmp->info = value;
+    if (q->next == NULL)
+    {
+        q->next = tmp;
+        tmp->next = NULL;
+        tmp->prev = q;      
+    }
+    else
+    {
+        tmp->next = q->next;
+        tmp->next->prev = tmp;
+        q->next = tmp;
+        tmp->prev = q;
+    }
+    cout<<"Element Inserted"<<endl;
+}
+ 
+/*
+ * Deletion of element from the list
+ */
+void double_llist::delete_element(int value)
+{
+    struct node *tmp, *q;
+     /*first element deletion*/
+    if (start->info == value)
+    {
+        tmp = start;
+        start = start->next;  
+        start->prev = NULL;
+        cout<<"Element Deleted"<<endl;
+        free(tmp);
+        return;
+    }
+    q = start;
+    while (q->next->next != NULL)
+    {   
+        /*Element deleted in between*/
+        if (q->next->info == value)  
+        {
+            tmp = q->next;
+            q->next = tmp->next;
+            tmp->next->prev = q;
+            cout<<"Element Deleted"<<endl;
+            free(tmp);
+            return;
+        }
+        q = q->next;
+    }
+     /*last element deleted*/
+    if (q->next->info == value)    
+    { 	
+        tmp = q->next;
+        free(tmp);
+        q->next = NULL;
+        cout<<"Element Deleted"<<endl;
+        return;
+    }
+    cout<<"Element "<<value<<" not found"<<endl;
+}
+ 
+/*
+ * Display elements of Doubly Link List
+ */
+void double_llist::display_dlist()
+{
+    struct node *q;
+    if (start == NULL)
+    {
+        cout<<"List empty,nothing to display"<<endl;
+        return;
+    }
+    q = start;
+    cout<<"The Doubly Link List is :"<<endl;
+    while (q != NULL)
+    {
+        cout<<q->info<<" <-> ";
+        q = q->next;
+    }
+    cout<<"NULL"<<endl;
+}
+ 
+/*
+ * Number of elements in Doubly Link List to show
+ */
+void double_llist::count()
+{ 	
+    struct node *q = start;
+    int cnt = 0;
+    while (q != NULL)
+    {
+        q = q->next;
+        cnt++;
+    }
+    cout<<"Number of elements are: "<<cnt<<endl;
+}
+ 
+/*
+ * Reverse Doubly Link List
+ */
+void double_llist::reverse()
+{
+    struct node *p1, *p2;
+    p1 = start;
+    p2 = p1->next;
+    p1->next = NULL;
+    p1->prev = p2;
+    while (p2 != NULL)
+    {
+        p2->prev = p2->next;
+        p2->next = p1;
+        p1 = p2;
+        p2 = p2->prev; 
+    }
+    start = p1;
+    cout<<"List Reversed"<<endl; 
+}
+
+#include <stdio.h>
+int main(){
+    int num1, num2, product;
+    
+    // Asking for input
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+    
+    // Multiply two numbers
+    product = num1 * num2;
+    
+    // Displaying result
+    printf("Product of %d and %d is: %d", num1, num2, product);
+    
+    return 0;
+}
+
+class Solution {
+public:
+    int divide(int dividend, int divisor) {
+        
+    }
+};
+
+#include <bits/stdc++.h>
+using namespace std;
+int a;
+string s;
+int main()
+{
+cout << "Enter :" ;
+cin >> a;
+cin >> s;
+int i=0;
+int c=0;
+int d=0;
+while (i<a)
+{
+     if(s[i]=='A')
+    { 
+        c++;
+    }
+    else
+
+       {
+        d++;
+       }
+       i++;
+}
+
+if(c>d)
+{cout << "Anton";}
+else if(d>c)
+{cout << "Danik";}
+else
+{cout << "Friendship";}
+return 0;
+
+}
+#include<stdio.h>
+int main()
+{
+      int num1,num2,div;
+      printf("\tEnter Two Numbers\n");
+      printf("---------------------------\n");
+      printf("Enter First Number  : ");
+      scanf("%d", &num1);
+      printf("\nEnter Second Number : ");
+      scanf("%d",&num2);
+      div=num1/num2;
+      printf("\nDivision of %d & %d is = %d",num1,num2,div);
+      return 0;
+}
+
+#include <stdio.h>
+int main() {   
+    int number;
+   
+    printf("Enter an integer: ");  
+    
+    // reads and stores input
+    scanf("%d", &number);
+
+    // displays output
+    printf("You entered: %d", number);
+    
+    return 0;
+}
+int main() {
+   // printf() displays the string inside quotation
+   printf("Hello, World!");
+   return 0;
+   
+}
+
+}
+
+#include<stdio.h>
+int main()
+{
+  int result,var1,var2;
+  printf("Enter the values for var1 and var2 \n");
+  scanf("%d %d",&var1,&var2);
+  result=var1+var2;//calculating sum
+  printf("The result is %d \n",result);
+  return 0;
+}
+#include <iostream>
+using namespace std;
+
+
+int main () {
+     n=6
+     int i=1
+     for (int i;i<=10; i++)
+     {
+
+        cout<<i*n<<endl;
+     }
+
+
+
+
+    return 0;    
+} 
+int main(){
+int x,y;
+  cout << "enter number 1?";
+  cin <<x;
+  cout << "enter number 2?"
+  cin >> y;
+  cout << (x+y);
+}
+import random
+
+my_list = [1, 'a', 32, 'c', 'd', 31]
+print(random.choice(my_list)
