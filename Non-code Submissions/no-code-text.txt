@@ -1,3 +1,19 @@
+
+#include<stdio.h>
+int main()
+{
+      int num1,num2,div;
+      printf("\tEnter Two Numbers\n");
+      printf("---------------------------\n");
+      printf("Enter First Number  : ");
+      scanf("%d", &num1);
+      printf("\nEnter Second Number : ");
+      scanf("%d",&num2);
+      div=num1/num2;
+      printf("\nDivision of %d & %d is = %d",num1,num2,div);
+      return 0;
+}
+
 #include <stdio.h>
 int main() {   
     int number;
@@ -61,5 +77,4 @@ import random
 
 my_list = [1, 'a', 32, 'c', 'd', 31]
 print(random.choice(my_list))
-
 
