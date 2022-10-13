@@ -19,7 +19,6 @@ def binary_search(arr, low, high, x):
         else:
             return binary_search(arr, mid + 1, high, x
             return binary_search(arr, mid + 1, high, x)
- 
     else:
         # Element is not present in the array
         return -1
@@ -546,6 +545,3 @@ import random
 
 my_list = [1, 'a', 32, 'c', 'd', 31]
 print(random.choice(my_list))
-
-
-
