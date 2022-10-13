@@ -75,6 +75,13 @@ const apparel = [
         Brand: "Sonic",
         Actual_price: 2534,
         Discount: 2
+    },
+    {
+        Name: "Pencil",
+        Category: "accessories",
+        Brand: "Womanista",
+        Actual_price: 2,
+        Discount: 1
     }
 ];
 
