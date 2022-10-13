@@ -1,3 +1,10 @@
+#include <stdio.h>
+int main() {
+   // printf() displays the string inside quotation
+   printf("Hello, World!");
+   return 0;
+}
+
 #include<stdio.h>
 int main()
 {
@@ -38,4 +45,5 @@ import random
 
 my_list = [1, 'a', 32, 'c', 'd', 31]
 print(random.choice(my_list))
+
 
