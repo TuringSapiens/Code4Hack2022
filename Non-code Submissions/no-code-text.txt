@@ -1,4 +1,4 @@
-<#iostream>
+#include <iostream>
 using namespace std;
 int main(){
 int x,y;
@@ -8,3 +8,8 @@ int x,y;
   cin >> y;
   cout << (x+y);
 }
+import random
+
+my_list = [1, 'a', 32, 'c', 'd', 31]
+print(random.choice(my_list))
+
