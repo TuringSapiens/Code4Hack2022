@@ -1,0 +1,31 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 // Online C compiler to run C program online\
+#include <stdio.h>\
+#include <math.h>\
+\
+int main() \
+\{\
+float x1, x2, y1, y2, distance;\
+printf("Enter the value of x1: ");\
+scanf("%f",&x1);\
+printf("Enter the value of x2: ");\
+scanf("%f",&x2);\
+printf("Enter the value of y1: ");\
+scanf("%f",&y1);\
+printf("Enter the value of y2: ");\
+scanf("%f",&y2);\
+\
+//formula\
+\
+distance=((x2-x1)*(x2-x1))+((y2-y1)*(y2-y1));\
+\
+printf("Distance between two points: %f", sqrt(distance));\
+\
+    return 0;\
+\}}
