@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    int input,output,a,b,five;
+    a = 1;
+    five = 5;
+    while (a<=4)
+    {
+    printf("Pick a number of matchsticks between 1-4: ");
+    scanf("%d",&input);
+    if (input>4 || input<1){
+    printf("You cheated. Restart the game to get another chance.");
+    break;
+    }
+    else
+    output = 5  - input;
+    b = 21 - five;
+    printf("I pick %d. %d matchsticks left\n ", output,b);
+    five = five + 5;
+    a = a+1;
+    }
+    if (b == 6)
+    printf("There is only one matchstick left and you have to pick it; I win\n");
+    return 0;
+    }
