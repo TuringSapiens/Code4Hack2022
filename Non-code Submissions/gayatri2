@@ -1,0 +1,12 @@
+//Write a program to subtract two integer in C?
+
+#include<stdio.h>
+int main()
+{
+  int result,var1,var2;
+  printf("Enter the values for var1 and var2 \n");
+  scanf("%d %d",&var1,&var2);
+  result=var1-var2;
+  printf("The result is %d \n",result);
+  return 0;
+}
