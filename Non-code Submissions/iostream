@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b,c;
+    cin>>a;
+    cin>>b;
+    cin>>c;
+
+    if(a>b){
+        if(a>c){
+            cout<<a<<" will die first";
+        }
+        else{
+            cout<<c<<" will die first";
+        }
+    }
+    else{
+        if(b>c){
+            cout<<b<<" will die first";
+        }
+        else{
+            cout<<c<<" will die first";
+        }
+    }
+    return 0;
+
+}
