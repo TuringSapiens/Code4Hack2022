@@ -1,5 +1,23 @@
+#include <stdio.h>
+int main() {
+   // printf() displays the string inside quotation
+   printf("Hello, World!");
+   return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+  int result,var1,var2;
+  printf("Enter the values for var1 and var2 \n");
+  scanf("%d %d",&var1,&var2);
+  result=var1+var2;//calculating sum
+  printf("The result is %d \n",result);
+  return 0;
+}
 #include <iostream>
 using namespace std;
+
 
 int main () {
      n=6
@@ -15,3 +33,17 @@ int main () {
 
     return 0;    
 } 
+int main(){
+int x,y;
+  cout << "enter number 1?";
+  cin <<x;
+  cout << "enter number 2?"
+  cin >> y;
+  cout << (x+y);
+}
+import random
+
+my_list = [1, 'a', 32, 'c', 'd', 31]
+print(random.choice(my_list))
+
+
