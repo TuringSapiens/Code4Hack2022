@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+<title>Loan Calculator</title>
+
+<style>
+body {
+background-color: #34495e;
+font-family: 'Trebuchet MS';
+}
+
+h1 {
+font-size: 40px;
+}
+
+h1 {
+font-size: 35px;
+margin-top: 30px;
+}
+
+#result {
+    display: none
+}
+
+.calculator {
+width: 500px;
+height: 500px;
+background-color: White;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translateX(-50%) translateY(-50%);
+padding: 20px 0px 0px 100px;
+border-radius: 50px;
+color: Black;
+}
+
+input {
+padding: 7px;
+width: 70%;
+margin-top: 7px;
+}
+</style>
+</head>
+
+<body>
+<div class="calculator">
+<h1>Loan Calculator</h1>
+
+
+<p><b>Loan Amount</b>:<br> <input type="number" id="amount" value="" required></p>
+
+<p><b>Interest Rate</b>:<br> <input type="number"  id="rate" value="" required></p>
+
+<p><b>Number of Years</b>:<br> <input type="number" id="years" value="" required></p>
+
+<p><b>Payment Frequency :</b>
+<select id='paymentTerm'>
+<option value="52">Weekly</option>
+<option value="26">Fortnightly</option>
+<option value="12">Monthly</option>
+<option value="4">Quarterly</option>
+<option value="1">Yearly</option>
+</select>
+</p>
+
+<button onclick="computeLoan()">Calculate</button>
+<div id="result">
+    <p><b>The repayment amount is <span id="outMonthly"></span> each <span
+id="paymentTermOut"></span></b></p>
+</div>
+
+<script language="JavaScript">
+
+const terms = {
+1 : 'year',
+4 : 'quater',
+12 : 'month',
+52 : 'week',
+26 : 'fortnight',
+}
+
+function computeLoan() {
+    document.getElementById("result").style.display = "block";
+var amount = parseFloat(document.getElementById("amount").value);
+var interest = parseFloat(document.getElementById("rate").value);
+var term = parseFloat(document.getElementById("years").value);
+var frequency = document.getElementById("paymentTerm").value;
+
+var finalAmmount = calculateMortgage(amount, interest, term, frequency);
+
+document.getElementById("outMonthly").innerText = "$" + finalAmmount;
+document.getElementById("paymentTermOut").innerText = terms[frequency];
+document.getElementById("customText").innerText = getCustomText(terms[frequency], finalAmmount);
+};
+
+
+function getCustomText(term, finalAmmount) {
+
+switch (term) {
+case "week":
+return "Each week you pay $" + finalAmmount;
+case "fortnight":
+return "Forthnightly repayment will be $" + finalAmmount;
+default:
+return "Repay $" + finalAmmount + " per " + term;
+}
+
+}
+
+
+function calculateMortgage(p, r, n, f) {
+
+// r = percentToDecimal(r); //convert percentage to a decimal
+r = r /100/ (+f);
+n = n * (+f); //convert years to months
+// var pmt = (r * p) / (1 - (Math.pow((1 + r), (-n)))); //c=
+// ((p * r) * Math.pow((1 + r), n)) / (Math.pow(1 + r), n) - 1
+var pmt = (p * r * Math.pow((1 + r), n))/(Math.pow((1 + r), n )- 1);
+return parseFloat(pmt.toFixed(2));
+}
+
+//Change the percent entered to a decimal
+function percentToDecimal(percent) {
+return (percent / 12) / 100;
+}
+
+
+function calculateInterest(amount) {
+ var interest = 5.4;
+
+//If loan amount is between $200,000 and $250,000, the interest rate will be 5.09%
+if (amount > 200000 && amount < 250000) {
+interest = 5.09;
+}
+
+//If loan amount is between $250,000 and $500,000, the interest rate will be 4.84%
+if (amount > 250000 && amount < 500000) {
+interest = 4.84;
+}
+
+//If loan amount is between $500,000 and $750,000, the interest rate will be 4.79%
+if (amount > 500000 && amount < 750000) {
+interest = 4.79;
+}
+
+//If loan amount is greater than $750,000, the interest rate will be 4.50%
+if (amount > 750000) {
+interest = 4.50;
+}
+return interest;
+}
+
+function postPayments(payment) {
+var htmlEl = document.getElementById("outMonthly");
+htmlEl.innerText = "$" + payment;
+
+// document.getElementById("outMonthly").innerText = payment;
+
+return;
+}
+</script>
+</body>
+</html>
