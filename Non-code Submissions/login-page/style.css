@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: url(bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.container{
+    font-family: 'Heebo', sans-serif;
+    position: absolute;
+    top:25%;
+    left:40%;
+    color: white;
+}
+.container h1{
+    display: inline-block;
+    font-size:40px;
+    border-bottom: 5px solid purple;
+    margin-bottom: 33px;
+    padding: 13px 0px;
+}
+.box{
+    width:100%;
+    border-bottom: 2px solid purple;
+    margin: 15px 0px;
+}
+.box i{
+    width:25px;
+    text-align: center;
+}
+.box input{
+    background: none;
+    width:75%;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 5px 10px;
+    margin: 7px 0px;
+    font-size:20px;
+}
+.btn{
+    color: white;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    margin: 12px 0px;
+    padding:10px 21px;
+    border-radius: 10px;
+    border: 2px solid purple;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn:hover{
+    opacity: 0.5;
+    color:purple;
+    background: white;
+}
