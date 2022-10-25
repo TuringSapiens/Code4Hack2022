@@ -166,14 +166,15 @@ html {
 
 #clients {
     display: flex;
-    grid-template-rows: repeat(20, 1fr);             //Remove lines 171 and 172 for grid style in order to add more clients AND change display style to grid
-    grid-template-columns: repeat(5, 1fr);   
+    /* grid-template-rows: repeat(20, 1fr);             */
+    /* Remove lines 171 and 172 for grid style in order to add more clients AND change display style to grid */
+    /* grid-template-columns: repeat(5, 1fr);    */
     /* justify-content: center;
     align-items: center; */
 }
 
 .client-item {
-    padding: 50px;
+    padding: 50 px;
 }
 
 #clients img {
@@ -237,10 +238,13 @@ footer {
 
 
 /* Utility Classes */
+.colors1{
+    color: #006d77;
+}
 
 .h-primary {
     font-family: 'Bree Serif', serif;
-    color: black;
+    color: 006d77;
     font-size: 3.8rem;
     padding: 12px;
 }
