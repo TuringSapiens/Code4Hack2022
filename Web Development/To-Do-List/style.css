@@ -83,6 +83,9 @@ ul li:hover {
 h1 {
 	text-align: center;
 }
+h1:hover{
+	color:#0079bf;
+}
 .add-task {
 	width: 100%;
 	outline: none;
